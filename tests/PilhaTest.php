@@ -12,13 +12,10 @@ final class PilhaTest extends TestCase{
 		$array->inserir(3);
 		
 
-	 	$this->assertEquals($array->total_de_itens(), 2);
+	 	$this->assertEquals($array->total_de_itens(), 3);
 
-
-			
 							
 	}
-	
 	
 
 	public function testRemoverItens(){
@@ -39,10 +36,6 @@ final class PilhaTest extends TestCase{
 	}
 }
 
-
-$testsuite = new PilhaTest();
-$testsuite->testInserirItemAleatorio();
-$testsuite->testRemoverItens();
 
 
 ?>
