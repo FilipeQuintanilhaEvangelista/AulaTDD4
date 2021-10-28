@@ -4,10 +4,6 @@ use PHPUnit\Framework\TestCase;
 
 final class PilhaTest extends TestCase{
 	
-	private $total;
-	private $ok;
-
-
 	public function testInserirItemAleatorio(){
 		
 		$array = new Pilha();
@@ -16,11 +12,7 @@ final class PilhaTest extends TestCase{
 		$array->inserir(3);
 		
 
-	 
-		if ( $array->total_de_itens() == 2 ){
-			$this->ok ++;	
-			}						
-			$this->total ++;
+	 	$this->assertEquals($array->total_de_itens(), 2);
 
 
 			
@@ -41,30 +33,16 @@ final class PilhaTest extends TestCase{
 
 		$itemRemovido = $array->remover();
 
-
-		if ( $itemRemovido == "5" ){
-			$this->ok ++;	
-			}						
-			$this->total ++;
+		$this->assertEquals($itemRemovido,5);
 
 			
 	}
-
-
-
-
-	
-
-
+}
 
 
 $testsuite = new PilhaTest();
-
-$testsuite->setUp();
-
-
 $testsuite->testInserirItemAleatorio();
 $testsuite->testRemoverItens();
-$testsuite->summary();
+
 
 ?>
