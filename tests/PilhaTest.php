@@ -14,11 +14,8 @@ final class PilhaTest extends TestCase{
 
 	 	$this->assertEquals($array->total_de_itens(), 3);
 
-
-			
 							
 	}
-	
 	
 
 	public function testRemoverItens(){
