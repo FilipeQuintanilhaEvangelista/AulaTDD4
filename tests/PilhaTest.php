@@ -12,7 +12,7 @@ final class PilhaTest extends TestCase{
 		$array->inserir(3);
 		
 
-	 	$this->assertEquals($array->total_de_itens(), 2);
+	 	$this->assertEquals($array->total_de_itens(), 3);
 
 
 			
@@ -37,12 +37,22 @@ final class PilhaTest extends TestCase{
 
 			
 	}
+
+	public function testTopo(){
+
+		$array = new Pilha();
+
+		$array->inserir(1);
+		$array->inserir(2);
+		$array->inserir(3);
+		$array->inserir(4);
+
+		$itemRemovido = $array->topo();
+
+		$this->assertEquals($itemRemovido,4);
+
+			
+	}
 }
-
-
-$testsuite = new PilhaTest();
-$testsuite->testInserirItemAleatorio();
-$testsuite->testRemoverItens();
-
 
 ?>
